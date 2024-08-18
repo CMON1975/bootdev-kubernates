@@ -4,9 +4,8 @@ metadata:
   name: crawler-service
 spec:
   selector:
-    app: synergychat-crawler  # Assuming the crawler pods are labeled with app: synergychat-crawler
+    app: synergychat-crawler
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-  type: ClusterIP  # Default type for internal-only services
