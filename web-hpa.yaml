@@ -1,0 +1,12 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: web-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: synergychat-web-65c9b5b69b-q84gs
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 50
